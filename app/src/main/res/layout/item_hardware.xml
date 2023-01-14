@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+       >
+    <TextView
+        android:id="@+id/tvHardwareId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID \t\t\t\t:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+        <TextView
+            android:id="@+id/tvHardwareStack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stack \t\t\t\t:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tvHardwareStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status \t\t\t:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+<!--        <TextView-->
+<!--            android:id="@+id/tvHardwareAmper"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Amper \t\t\t\t:"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHardwareVoltage"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Voltage \t\t\t\t:"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHardwarePower"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Power \t\t\t\t:"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvHardwareEnergy"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Energy \t\t\t\t:"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ON"-->
+<!--            android:textSize="20sp"-->
+<!--            android:background="@color/teal_200"/>-->
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

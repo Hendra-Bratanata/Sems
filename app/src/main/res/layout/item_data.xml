@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+       >
+    <TextView
+        android:id="@+id/tvHardwareId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID \t\t\t\t:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+        <TextView
+            android:id="@+id/tvHardwareVoltage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stack \t\t\t\t:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tvHardwareCurrent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status \t\t\t\t:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
