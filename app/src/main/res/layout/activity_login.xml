@@ -5,6 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:id="@+id/loadingLogin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="242dp" />
+
     <ImageView
         android:id="@+id/imgLoginLogo"
         android:layout_width="100dp"

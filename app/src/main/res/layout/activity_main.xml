@@ -4,15 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools">
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainSwip">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHardware"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:overScrollMode="never"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_hardware" />
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHardware"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:overScrollMode="never"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_hardware" />
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </LinearLayout>

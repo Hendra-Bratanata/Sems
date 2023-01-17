@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.shadad.epm"
-        minSdk 24
+        minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -60,14 +60,14 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.loopj.android:android-async-http:1.4.11'
+    implementation("com.android.volley:volley:1.2.1")
     //Retrofit
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
 
-
-
-
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
 }

@@ -2,6 +2,8 @@ package com.shadad.epm;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.json.JSONObject;
+
 public class DataItemSems {
 
 	@SerializedName("STACK")
@@ -30,6 +32,7 @@ public class DataItemSems {
 
 	@SerializedName("ID")
 	private String iD;
+
 
 	public String getSTACK(){
 		return sTACK;

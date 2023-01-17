@@ -3,6 +3,7 @@ package com.shadad.epm;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +16,11 @@ import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements RecycleViewClickInterface{
 private ActivityMainBinding binding;
-    ArrayList<DataItemHardware> dataItems;
+    ArrayList<DataItemHardware> dataHardwareItems;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,15 @@ private ActivityMainBinding binding;
         binding.rvHardware.setLayoutManager(layoutManager);
         DividerItemDecoration itemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
         binding.rvHardware.addItemDecoration(itemDecoration);
+        swipeRefreshLayout = findViewById(R.id.mainSwip);
+        swipeRefreshLayout.setColorSchemeResources(R.color.purple_200);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getDataHardware();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         getDataHardware();
 
 //        AsyncHttpClient client = new AsyncHttpClient();
@@ -67,11 +77,11 @@ private ActivityMainBinding binding;
             public void onResponse(Call<HardwareResponse> call, retrofit2.Response<HardwareResponse> response) {
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
-                        dataItems = new ArrayList<>();
+                        dataHardwareItems = new ArrayList<>();
                         for (int i = 0 ; i < response.body().getData().size(); i++){
-                            dataItems.add(response.body().getData().get(i));
+                            dataHardwareItems.add(response.body().getData().get(i));
                         }
-                        HardwareAdapter adapter = new HardwareAdapter(dataItems, MainActivity.this);
+                        HardwareAdapter adapter = new HardwareAdapter(dataHardwareItems, MainActivity.this);
                         binding.rvHardware.setAdapter(adapter);
 
 
@@ -93,8 +103,10 @@ private ActivityMainBinding binding;
     @Override
     public void onItemClick(int posisition) {
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-        intent.putExtra("id",dataItems.get(posisition).getID());
+        intent.putExtra("id", dataHardwareItems.get(posisition).getID());
+        intent.putExtra("stack", dataHardwareItems.get(posisition).getSTACK());
+        intent.putExtra("status", dataHardwareItems.get(posisition).getSTATUS());
         startActivity(intent);
-        Toast.makeText(this, dataItems.get(posisition).getID(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, dataHardwareItems.get(posisition).getID(), Toast.LENGTH_SHORT).show();
     }
 }

@@ -7,4 +7,7 @@ import retrofit2.http.Path;
 interface ApiService {
     @GET("{apiKey}")
     Call<HardwareResponse>getData(@Path("apiKey") String apiKey);
+
+    @GET("{id}")
+    Call<SemsResponse>getDataSems(@Path("id") String apiKey);
 }
